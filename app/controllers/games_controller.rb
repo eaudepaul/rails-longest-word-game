@@ -15,8 +15,6 @@ class GamesController < ApplicationController
     truorfals = URI.open(url).read
     realword = JSON.parse(truorfals)
     valid = realword["found"]
-    # The word is valid according to the grid and is an English word
-    # 3 part 1 == true and part 2 == true
     @answer = if used && valid
                 "Good Job!"
               else
